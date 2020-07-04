@@ -1,18 +1,76 @@
 // Iteration #1: Find the maximum
+function maxOfTwoNumbers(num1, num2) {
+  return (num1 > num2) ? num1 : num2;
+}
+console.log("max number is: " + maxOfTwoNumbers(14, 29))
+// to invoke the function I would type:
+maxOfTwoNumbers(12,25);
 
 // Iteration #2: Find longest word
-const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+let words = [
+  'mystery',
+  'brother',
+  'aviator',
+  'crocodile',
+  'pearl',
+  'orchard',
+  'crackpot'
+];
+
+function longestWord(words) {
+  let longestWord = ""
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > longestWord.length) {
+      longestWord = words[i]
+    }
+  }
+  console.log("longest word is : " + longestWord)
+}
+longestWord(words)
 
 // Iteration #3: Calculate the sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
+function sumNumbers(numbers) {
+  var total = 0;
+  for (var i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  return total;
+}
+sumNumbers(numbers)
+
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
-const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-// Level 2: Array of strings
-const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+const numbersTwo = [2, 6, 9, 10, 7, 4, 1, 9];
+
+function averageNumbers(numbersTwo) {
+  var averageTotal = 0;
+for (var i = 0; i < numbersTwo.length; i++) {
+    averageTotal += numbersTwo[i];
+  }
+  return (averageTotal/numbersTwo.length);
+}
+averageNumbers(numbersTwo)
+
+// Level 2: Array of strings --
+const newWords = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+
+function totalWordLength(array) {
+  let total = 0
+  array.forEach((word) => {
+    total += word.length
+  })
+  return total
+}
+console.log("total words length: ", totalWordLength(newWords))
+
+function avgWordLength(numbers) {
+  return totalWordLength(numbers) / numbers.length
+}
+console.log("avg word length is : " + avgWordLength(newWords))
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
